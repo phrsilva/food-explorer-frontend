@@ -1,5 +1,9 @@
+import { Container } from "./styles"
 export function Login() {
     return (
-        <h1>Login - Food Explorer</h1>
+        <Container>
+            <h1>Login - Food Explorer</h1>
+
+        </Container>
     )
 }

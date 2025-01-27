@@ -13,6 +13,7 @@ export default createGlobalStyle`
     }
 
     body {
+        background-color: ${({theme}) => theme.ESCURO.ESCURO_400};
 
     }
 

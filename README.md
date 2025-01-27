@@ -5,12 +5,12 @@ Neste repositório trago minha solução ao desafio, bem como seu deploy atravé
 
 ## Requisitos do Frontend 
 
-- [] Implementação das telas de login, página principal, página de detalhes do prato, e outras conforme o layout disponibilizado no Figma.
-- [] Funcionalidades para visualização de pratos, busca por nome e ingredientes, e interação com os pratos.
-- [] Suporte para upload de imagens durante o cadastro dos pratos.
-- [] Interface de usuário responsiva de acordo com o conceito Mobile First.
-- [] Implementação de animações e transições para melhorar a experiência do usuário.
-- [] Integração com a API do back-end para o consumo de dados.
+- [ ] Implementação das telas de login, página principal, página de detalhes do prato, e outras conforme o layout disponibilizado no Figma.
+- [ ] Funcionalidades para visualização de pratos, busca por nome e ingredientes, e interação com os pratos.
+- [ ] Suporte para upload de imagens durante o cadastro dos pratos.
+- [ ] Interface de usuário responsiva de acordo com o conceito Mobile First.
+- [ ] Implementação de animações e transições para melhorar a experiência do usuário.
+- [ ] Integração com a API do back-end para o consumo de dados.
 - [x] Documentação detalhada no README, incluindo instruções de execução do projeto e link de deploy.
 
 ## Instruções de Execução

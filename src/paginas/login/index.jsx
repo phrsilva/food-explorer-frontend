@@ -3,7 +3,10 @@ import { Container, Formulario } from "./styles"
 import { Entrada } from "../../componentes/entrada"
 import { Botao } from "../../componentes/botao"
 import { BotaoDeTexto } from "../../componentes/botaoDeTexto"
+import { useNavigate } from "react-router"
+
 export function Login() {
+    const navegar = useNavigate()
     return (
         <Container>
             <div className="logo">
@@ -24,7 +27,7 @@ export function Login() {
                 </Formulario>
                 <Formulario>
                     <Botao title="Entrar"/>
-                    <BotaoDeTexto title="Criar Conta"/>
+                    <BotaoDeTexto title="Criar Conta" onClick={() => navegar("/cadastro")}/>
                 </Formulario>
             </div>
 

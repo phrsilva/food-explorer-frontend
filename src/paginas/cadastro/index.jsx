@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router"
 import { Logo } from "../../componentes/logo"
 import { Container, Formulario } from "./styles"
 import { Entrada } from "../../componentes/entrada"
 import { Botao } from "../../componentes/botao"
 import { BotaoDeTexto } from "../../componentes/botaoDeTexto"
 export function Cadastro() {
+    const navegar = useNavigate()
     return (
         <Container>
             <div className="logo">
@@ -28,7 +30,7 @@ export function Cadastro() {
                 </Formulario>
                 <Formulario>
                     <Botao title="Criar conta"/>
-                    <BotaoDeTexto title="Já possuo uma conta"/>
+                    <BotaoDeTexto title="Já possuo uma conta" onClick={() => navegar(-1)}/>
                 </Formulario>
             </div>
 

@@ -19,6 +19,7 @@ border-radius: 1rem;
 
     padding: 1.2rem;
     background: ${({theme}) => theme.ESCURO.ESCURO_900};
+    color: ${({theme}) => theme.CLARO.CLARO_400};
     border: none;
 
     &::placeholder {

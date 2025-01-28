@@ -20,8 +20,12 @@ export const Container = styled.button`
     font-size: 1.4rem;
     
 
-    &:disabled {
-        opacity: 0.5;
+    &:hover {
+        filter: brightness(1.1);
+        /* animação */
+        transform: scale(1.1);
+
+        
         
     }
 

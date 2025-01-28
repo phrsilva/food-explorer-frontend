@@ -16,11 +16,11 @@ export function Login() {
 
                 <Formulario>                
                     <p>Email</p>
-                    <Entrada placeholder="Digite seu email" />
+                    <Entrada type="email" placeholder="Digite seu email" />
                 </Formulario>
                 <Formulario>
                     <p>Senha</p>
-                    <Entrada placeholder="Digite sua senha" />
+                    <Entrada type="password" placeholder="Digite sua senha" />
                 </Formulario>
                 <Formulario>
                     <Botao title="Entrar"/>

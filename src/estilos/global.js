@@ -13,7 +13,8 @@ export default createGlobalStyle`
     }
 
     body {
-        background-color: ${({theme}) => theme.ESCURO.ESCURO_400};
+        font-family: 'Roboto', sans-serif;
+        background-color: ${({theme}) => theme.ESCURO.ESCURO_800};
 
     }
 

@@ -15,6 +15,8 @@ export const Container = styled.button`
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    display: flex;
+    gap: 0.8rem;
 
     font-family: 'Poppins', sans-serif;
     font-size: 1.4rem;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Botao } from "../../componentes/botao";
+import { PontoDeQuebra } from "../../estilos/pontoDeQuebra";
 
 export const Container = styled.div`
     
@@ -44,6 +45,60 @@ export const Conteudo = styled.div`
         justify-content: center;
     }
 
+    @media (min-width: ${PontoDeQuebra}) {
+        display: grid;
+        grid-template-areas: 
+        "navegacao navegacao"
+        "voltar vazio"
+        "prato titulo"
+        "prato descricao"
+        "prato tags"
+        "prato preco"
+        "rodape rodape";
+        grid-template-columns: 50% 50%;
+        
+
+        margin: 2.4rem 12rem;
+        gap: 2.4rem;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            grid-area: prato;
+        }
+
+        div:first-child {
+            grid-area: voltar;
+        }
+
+        button {
+            align-self: flex-start;
+            grid-area: voltar;
+        }
+
+        h2 {
+            grid-area: titulo;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.4rem;
+        }
+
+        p {
+            grid-area: descricao;
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+        }
+
+        div:nth-child(5) {
+            grid-area: tags;
+        }
+
+        div:nth-child(6) {
+            grid-area: preco;
+        }
+
+       
+    }
+
 
 
 `;
@@ -61,9 +116,38 @@ export const Tags = styled.div`
         border-radius: .6rem;
         font-size: 1.2rem;
     }
+
+    @media (min-width: ${PontoDeQuebra}) {
+    display: flex;
+    justify-content: flex-start;
+    }
+
 `;
 
 export const Pedido = styled.div`
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+    font-size: 2.2rem;
+    color: ${({theme}) => theme.CLARO.CLARO_300};
+
+    margin-bottom: 2rem;
+
+    :hover {
+        cursor: pointer;
+    }
+
+    @media (min-width: ${PontoDeQuebra}) {
+    justify-content: flex-start;
+    }
+
 `;
 
+export const BotaoPedido = styled(Botao)`
+    margin: 1.2rem auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: .9rem;
+`;

@@ -27,7 +27,9 @@ export const Container = styled.div`
         margin: 0 auto;
         align-items: center;
         justify-content: center;
-        gap: 2rem
+        gap: 2rem;
+        bottom: 0;
+        position: fixed;
 
     }
 

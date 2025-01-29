@@ -1,8 +1,9 @@
-import { Container, Conteudo, Tags, Pedido} from "./styles"
+import { Container, Conteudo, Tags, Pedido, BotaoPedido} from "./styles"
 import { Rodape } from "../../componentes/rodape"
 import { FiChevronLeft, FiPlus, FiMinus } from "react-icons/fi"
 import { BarraDeNavegacao } from "../../componentes/barraDeNavegacao"
 import {BotaoDeTexto} from "../../componentes/botaoDeTexto"
+import {PiReceipt} from "react-icons/pi"
 import imgPrato from "../../assets/prato.png"
 
 export function Prato() {
@@ -27,8 +28,10 @@ export function Prato() {
                 </Tags>
 
                 <Pedido>
-                    <BotaoDeTexto Icon={FiPlus} title={"1"}/>
-                    <FiMinus/>
+                    <FiPlus size={32}/>
+                    <span>1</span>
+                    <FiMinus size={32}/>
+                    <BotaoPedido Icon={PiReceipt} title={"pedir R$ 25,00"}/>
                 </Pedido>
 
 

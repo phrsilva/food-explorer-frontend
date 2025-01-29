@@ -1,6 +1,6 @@
 import { Container } from "./styles.js"
 
-export function Botao({title, className, loading = false, ...rest}) {
+export function Botao({title, Icon, className, loading = false, ...rest}) {
     return (
         <Container 
         type="button"
@@ -9,7 +9,7 @@ export function Botao({title, className, loading = false, ...rest}) {
         {...rest}
 
         >
-            
+            {Icon && <Icon size={20} />}
             {title}
 
         </Container>

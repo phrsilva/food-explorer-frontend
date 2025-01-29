@@ -11,7 +11,6 @@ export const Container = styled.div`
     justify-content: space-between;
     gap: 1rem;
     background-color: ${({theme}) => theme.ESCURO.ESCURO_900};
-    
 
     > svg {
         color: ${({theme}) => theme.CLARO.CLARO_100};
@@ -53,7 +52,7 @@ export const BotaoPedidos = styled(Botao)`
     border-radius: 50%;
     padding: 0;
     
-    position: fixed;
+    position: absolute;
     top: 2.2rem;
     right: 1.5rem;
 

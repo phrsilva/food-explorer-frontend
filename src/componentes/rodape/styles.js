@@ -8,15 +8,16 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     padding: 2rem;
+    bottom: 0;
 
     flex-direction: inline;
     justify-content: space-between;
-    max-height: 7rem;
-    position: fixed;
-    bottom: 0;
+    height: 7rem;
+   
     width: 100%;
     background-color: ${({theme}) => theme.ESCURO.ESCURO_900};
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    text-align: left;
 
     color: ${({theme}) => theme.CLARO.CLARO_300};
 
@@ -44,6 +45,7 @@ export const Logo = styled.div`
         color: ${({theme}) => theme.CLARO.CLARO_700};
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
-        font-size: 2.4re;
+        font-size: 1.6rem;
 
 `;
+

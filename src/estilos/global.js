@@ -15,6 +15,7 @@ export default createGlobalStyle`
     body {
         font-family: 'Roboto', sans-serif;
         background-color: ${({theme}) => theme.ESCURO.ESCURO_800};
+        color: ${({theme}) => theme.CLARO.CLARO_100};
 
     }
 

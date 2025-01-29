@@ -1,38 +1,49 @@
 import styled from "styled-components";
+import { PontoDeQuebra } from "../../estilos/pontoDeQuebra";
+
 
 export const Container = styled.div`
 
     margin: 0 auto;
-
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 2rem;
+
+    flex-direction: inline;
+    justify-content: space-between;
     max-height: 7rem;
-    /* position at the bottom */
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: ${({theme}) => theme.ESCURO.ESCURO_900};
-    gap: .8rem;
+    font-size: 1.2rem;
 
-    color: ${({theme}) => theme.CLARO.CLARO_100};
+    color: ${({theme}) => theme.CLARO.CLARO_300};
 
-    img {
-        
-    }
 
-    p {
-        color: ${({theme}) => theme.CLARO.CLARO_400};
-        
-    }
+    @media (min-width: ${PontoDeQuebra}) {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem
 
-    p:last-child {
-        color: ${({theme}) => theme.CLARO.CLARO_100};
-        
     }
 
     
 
-  
-  
+
+`;
+
+export const Logo = styled.div`
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: ${({theme}) => theme.CLARO.CLARO_700};
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 2.4re;
+
 `;

@@ -1,5 +1,4 @@
-import { Container, LogoNavegacao } from "./styles";
-import { Logo } from "../../componentes/logo";
+import { Container, LogoNavegacao, BotaoPedidos } from "./styles";
 import { FiMenu } from "react-icons/fi";
 import { PiReceipt } from "react-icons/pi";
 
@@ -9,6 +8,7 @@ export function BarraDeNavegacao() {
             <FiMenu />
             <LogoNavegacao/>
             <PiReceipt  />
+            <BotaoPedidos title={"0"}/>
 
 
 

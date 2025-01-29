@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Logo} from "../../componentes/logo";
+import {Botao} from "../../componentes/botao";
 
 export const Container = styled.div`
 
@@ -15,6 +16,9 @@ export const Container = styled.div`
     > svg {
         color: ${({theme}) => theme.CLARO.CLARO_100};
         font-size: 2.4rem;
+        cursor: pointer;
+
+        
     }
 
 
@@ -38,6 +42,21 @@ export const LogoNavegacao = styled(Logo)`
     img {
         margin-bottom: 0;
     }
+
+
+`;
+
+export const BotaoPedidos = styled(Botao)`
+
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    padding: 0;
+    
+    position: fixed;
+    top: 2.2rem;
+    right: 1.5rem;
+
 
 
 `;

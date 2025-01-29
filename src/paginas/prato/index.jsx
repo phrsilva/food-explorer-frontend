@@ -1,13 +1,13 @@
 import { Container } from "./styles"
 import { Rodape } from "../../componentes/rodape"
+import { BarraDeNavegacao } from "../../componentes/barraDeNavegacao"
 
 export function Prato() {
     return (
 
         <Container>
-            <h1>Prato</h1>
-            <Rodape></Rodape>
-
+            <BarraDeNavegacao/>
+            <Rodape/>
         </Container>
 
         

@@ -27,6 +27,22 @@ export const Conteudo = styled.div`
         max-width: 26.4rem;
         max-height: 26.4rem;
 
+        /* animação para a imagem */
+
+        animation-name: spin;
+        animation-duration: 39000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @keyframes spin {
+            from {
+                transform:rotate(0deg);
+            }
+            to {
+                transform:rotate(360deg);
+            }
+        }
+
     }
 
     h2 {
@@ -55,16 +71,21 @@ export const Conteudo = styled.div`
         "prato tags"
         "prato preco"
         "rodape rodape";
-        grid-template-columns: 50% 50%;
+
         
 
-        margin: 2.4rem 12rem;
+        grid-template-columns: 90% 1fr;
+
         gap: 2.4rem;
         align-items: center;
         justify-content: center;
 
         img {
             grid-area: prato;
+            width: 100%;
+            margin-top: .6rem;
+            max-width: 26.4rem;
+            max-height: 26.4rem;
         }
 
         div:first-child {
@@ -72,8 +93,8 @@ export const Conteudo = styled.div`
         }
 
         button {
-            align-self: flex-start;
             grid-area: voltar;
+            align-self: flex-start;
         }
 
         h2 {
@@ -109,6 +130,12 @@ export const Tags = styled.div`
     gap: .8rem;
     justify-content: center;
     margin: 1.2rem auto;
+    cursor: pointer;
+
+    :hover {
+        filter: brightness(1.1);
+        transform: scale(1.1);
+    }
 
     span {
         background-color: ${({theme}) => theme.ESCURO.ESCURO_1000};

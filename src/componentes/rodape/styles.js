@@ -8,7 +8,6 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     padding: 2rem;
-    bottom: 0;
 
     flex-direction: inline;
     justify-content: space-around;
@@ -28,6 +27,7 @@ export const Container = styled.div`
         align-items: center;
         gap: 2rem;
         bottom: 0;
+        position:fixed ;
 
     }
 

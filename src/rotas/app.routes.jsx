@@ -5,7 +5,7 @@ import {MenuLateral} from "../componentes/menuLateral"
 export function RotasDeAplicacao() {
     return (
         <Routes>
-            <Route path="/" element={<MenuLateral />} />            
+            <Route path="/" element={<Prato />} />            
         </Routes>
     );
 }

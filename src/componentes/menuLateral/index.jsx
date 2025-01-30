@@ -3,11 +3,11 @@ import { FiX } from "react-icons/fi"
 import {Entrada} from "../../componentes/entrada"
 import { BotaoDeTexto } from "../botaoDeTexto"
 
-export function MenuLateral() {
+export function MenuLateral({fecharMenu}) {
     return (
         <Container>
             <Cabecalho>
-                <FiX />
+                <FiX onClick={fecharMenu}/>
                 <h1>menu</h1>
             </Cabecalho>
             <Corpo>

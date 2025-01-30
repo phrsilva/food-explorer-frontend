@@ -2,12 +2,30 @@ import styled from "styled-components";
 import { Rodape } from "../rodape";
 
 
-export const Container = styled.div`
+export const Container = styled.aside`
 
     display: flex;
     flex-direction: column;
     height: 100vh;
 
+    /* animação ao abrir e fechar menu */
+    animation-name: menu;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+
+    @keyframes menu {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    
+    
 `
 export const Cabecalho = styled.div`
 
@@ -57,3 +75,4 @@ export const RodapeMenu = styled(Rodape)`
     padding: 1rem;
 
 `
+

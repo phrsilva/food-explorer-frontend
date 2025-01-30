@@ -103,9 +103,7 @@ export const BotaoPedidos = styled(Botao)`
     top: 2.2rem;
     right: 1.5rem;
 
-    @media (min-width: ${PontoDeQuebra}) {
-        display: none;
-    }
+
 
 `;
 

@@ -11,7 +11,7 @@ export const Container = styled.div`
     bottom: 0;
 
     flex-direction: inline;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 7rem;
    
     width: 100%;
@@ -26,10 +26,8 @@ export const Container = styled.div`
         display: flex;
         margin: 0 auto;
         align-items: center;
-        justify-content: center;
         gap: 2rem;
         bottom: 0;
-        position: fixed;
 
     }
 

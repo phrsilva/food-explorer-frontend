@@ -1,12 +1,9 @@
-import { Container, LogoNavegacao, BotaoPedidos, BotaoPedidosDesktop } from "./styles";
+import { Container, LogoNavegacao, BotaoPedidos, Overlay } from "./styles";
 import { FiMenu } from "react-icons/fi";
 import { PiReceipt } from "react-icons/pi";
-import { RxExit } from "react-icons/rx";
 
 import { useState } from "react";
 import { MenuLateral } from "../menuLateral";
-import { Entrada } from "../entrada";
-import { Botao } from "../botao";
 
 
 export function BarraDeNavegacao() {
@@ -28,12 +25,9 @@ export function BarraDeNavegacao() {
         <>
             {!menuAberto && (
                 <Container>
-                    <FiMenu onClick={abrirMenu} className="iconeMovel" />
+                    <FiMenu onClick={abrirMenu} />
                     <LogoNavegacao/>
-                    <Entrada type="text" placeholder="Busque por pratos ou ingredientes" className="iconeDesktop"/>
-                    <BotaoPedidosDesktop title="Meus pedidos (0)" Icon={PiReceipt} className="iconeDesktop"/>
-                    <RxExit className="iconeDesktop"/>
-                    <PiReceipt className="iconeMovel" />
+                    <PiReceipt  />
                     <BotaoPedidos title={"0"}/>
                 </Container>
             )}

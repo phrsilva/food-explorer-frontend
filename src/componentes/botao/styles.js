@@ -24,8 +24,7 @@ export const Container = styled.button`
 
     &:hover {
         filter: brightness(1.1);
-        /* animação */
-        transform: scale(1.1);
+        
 
         
         

@@ -13,13 +13,7 @@ export const Container = styled.div`
     gap: 1rem;
     background-color: ${({theme}) => theme.ESCURO.ESCURO_900};
 
-    .iconeDesktop {
-        visibility: hidden;
-       
-        overflow: hidden;
-    }
-
-    
+     
 
     svg {
         color: ${({theme}) => theme.CLARO.CLARO_100};
@@ -50,22 +44,7 @@ export const Container = styled.div`
 
 
 
-        .iconeMovel {
-            visibility: hidden;
-            width: 0;
-            height: 0;
-            overflow: hidden
-        }
-
-        .iconeDesktop {
-            visibility: visible;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-           
-        }
+        
     }
 
     
@@ -109,12 +88,11 @@ export const BotaoPedidos = styled(Botao)`
     top: 2.2rem;
     right: 1.5rem;
 
-    @media (min-width: ${PontoDeQuebra}) {
-        display: none;
-    }
+    
 
 `;
 
 export const BotaoPedidosDesktop = styled(Botao)`
     max-width: 21rem;
 `
+

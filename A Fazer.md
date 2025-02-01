@@ -1,7 +1,7 @@
 # A FAZER 
 
 - [x] Corrigir estilos da barra de navegação desktop 
-- [ ] Página Home
+- [x] Página Home
 - [ ] Página Novo Prato
 - [ ] Página Editar Prato
 - [ ] Backend

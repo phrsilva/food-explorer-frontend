@@ -3,6 +3,9 @@ import {Logo} from "../../componentes/logo";
 import {Botao} from "../../componentes/botao";
 import {PontoDeQuebra} from "../../estilos/pontoDeQuebra";
 
+
+// A FAZER: CORRIGIR ESTILOS DA BARRA DESKTOP
+
 export const Container = styled.div`
 
     display: flex;
@@ -55,11 +58,7 @@ export const Container = styled.div`
 export const LogoNavegacao = styled(Logo)`
     
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
+    width: 25%;
 
     h1 {
         color: ${({theme}) => theme.CLARO.CLARO_100};

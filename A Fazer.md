@@ -1,61 +1,19 @@
 # A FAZER 
 
-Lista de checagem do frontend
-
-## Componentes do React 
-
-- [ ] Input
-- [ ] Botão
-- [ ] Botão de Texto
-- [ ] Menu lateral
-- [ ] Cabeçalho
-- [ ] Rodapé
-- [ ] Banner
-- [ ] Marcadores (ingrediente)
-- [ ] Área de texto (descrição do prato)
-
-## Estilos Globais
-
-- [ ] Definições Globais
-- [ ] Tema
-
-## Rotas de navegação
-
-- [ ] Autenticação
-- [ ] Aplicativo
-
-## Tela de Login
-
-- [ ] Layout Móvel
-- [ ] Layout Desktop
-- [ ] Animações
-
-## Tela de Cadastro
-
-- [ ] Layout Móvel
-- [ ] Layout Desktop
-- [ ] Animações
-
-## Página Principal
-
-- [ ] Layout Móvel
-- [ ] Layout Desktop
-- [ ] Animações
-
-## Detalhes do Prato
-
-- [ ] Layout Móvel
-- [ ] Layout Desktop
-- [ ] Animações
-
-## Cadastrar prato (admin)
-
-- [ ] Layout Móvel
-- [ ] Layout Desktop
-- [ ] Animações
-
-## Editar prato (admin)
-
-- [ ] Layout Móvel
-- [ ] Layout Desktop
-- [ ] Animações
+- [x] Corrigir estilos da barra de navegação desktop 
+- [ ] Página Home
+- [ ] Página Novo Prato
+- [ ] Página Editar Prato
+- [ ] Backend
+  - [ ] Banco de Dados
+  - [ ] Autenticação
+  - [ ] Requisitos do Backend
+  - [ ] Testes de integração
+  - [ ] Documentação do Backend
+  - [ ] Documentação detalhada no README, incluindo instruções de execução do projeto e link de deploy
+- [ ] Navegação do Admin 
+  - [ ] Barra de navegação
+  - [ ] Página Home
+  - [ ] Página Prato
+- [ ] Deploy do Frontend
+- [ ] Deploy do Backend

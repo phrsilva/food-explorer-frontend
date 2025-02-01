@@ -26,6 +26,8 @@ export function Principal() {
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
+                        <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
+                        <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
                 </Swiper>
             </Secao>
 
@@ -36,6 +38,8 @@ export function Principal() {
                     loop={true}
                     >
                         {/* Componentes CartaoPrato dentro dos slides */}
+                        <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
+                        <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
@@ -53,19 +57,6 @@ export function Principal() {
                         {/* Componentes CartaoPrato dentro dos slides */}
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
-                        <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
-                        <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
-                        <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
-                </Swiper>
-            </Secao>
-
-            <Secao title="Entradas">
-                <Swiper
-                    spaceBetween={20}
-                    slidesPerView="auto" // Exibe múltiplos slides ao mesmo tempo
-                    loop={true}
-                    >
-                        {/* Componentes CartaoPrato dentro dos slides */}
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>
                         <SwiperSlide style={{ width: "auto" }}><CartaoPrato /></SwiperSlide>

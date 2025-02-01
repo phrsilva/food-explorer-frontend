@@ -1,11 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import {Prato} from "../paginas/prato"
-import {MenuLateral} from "../componentes/menuLateral"
+import {Principal} from "../paginas/principal"
 
 export function RotasDeAplicacao() {
     return (
         <Routes>
-            <Route path="/" element={<Prato />} />            
+            <Route path="/" element={<Principal />} />            
         </Routes>
     );
 }

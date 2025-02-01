@@ -84,7 +84,7 @@ export const BotaoPedidos = styled(Botao)`
     padding: 0;
     
     position: absolute;
-    top: 2.2rem;
+    top: 3rem;
     right: 1.5rem;
 
     

@@ -15,5 +15,6 @@
   - [ ] Barra de navegação
   - [ ] Página Home
   - [ ] Página Prato
+- [ ] Navegação entre as páginas
 - [ ] Deploy do Frontend
 - [ ] Deploy do Backend

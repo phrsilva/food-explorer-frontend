@@ -35,6 +35,16 @@ export const Formulario = styled.form`
         width: 100%;
     }
 
+    .botoes {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+        button:first-child {
+            background-color: ${({theme}) => theme.ESCURO.ESCURO_1000};
+        }
+    }
+
     @media (min-width: ${PontoDeQuebra}) {
         margin: auto 12.5rem;
 

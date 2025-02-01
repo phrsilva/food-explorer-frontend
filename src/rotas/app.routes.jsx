@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import {Principal} from "../paginas/principal"
-import { NovoPrato } from "../paginas/novoPrato";
+import { EditarPrato } from "../paginas/editarPrato";
 
 export function RotasDeAplicacao() {
     return (
         <Routes>
-            <Route path="/" element={<NovoPrato />} />            
+            <Route path="/" element={<EditarPrato />} />            
         </Routes>
     );
 }

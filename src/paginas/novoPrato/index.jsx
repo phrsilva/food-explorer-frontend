@@ -32,32 +32,32 @@ export function NovoPrato() {
                 <h2>Novo Prato</h2>
 
                 <span>Imagem do prato</span>
-                <Entrada type="" placeholder="Nome do prato" />
+                <Entrada type="file" placeholder="Nome do prato" />
 
-                <span>Nome</span>
-                <Entrada type="text" placeholder="Nome do prato" />
+                <div className="ImagemNomeCategoria">
+                    <span>Nome</span>
+                    <Entrada type="text" placeholder="Nome do prato" />
 
-                <span>Categoria</span>
-                {/* Input type select */}
-                <Selecao/>
+                    <span>Categoria</span>
+                    {/* Input type select */}
+                    <Selecao/>
+                </div>
 
-                <span>Ingredientes </span>
-                <Ingredientes onChange={setIngredientes} onKeyDown={salvarPrato} />
+                <div className="IngredientesPreco">
 
+                    <span>Ingredientes </span>
+                    <Ingredientes onChange={setIngredientes} onKeyDown={salvarPrato} />
+
+                    <span>Preço</span>
+                    <Entrada type="" placeholder="R$ 0,00" />
                 
-
-
-                <span>Preço</span>
-                <Entrada type="" placeholder="R$ 0,00" />
+                </div>
 
                 <span>Descrição</span>
                 <AreaDeTexto placeholder="Descrição do Prato" />
 
 
                 <Botao title="Salvar Prato"/>
-
-
-
 
 
             </Formulario>

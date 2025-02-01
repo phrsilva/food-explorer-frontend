@@ -2,9 +2,9 @@
 
 - [x] Corrigir estilos da barra de navegação desktop 
 - [x] Página Home
-- [ ] Página Novo Prato
-- [ ] Página Editar Prato
-- [ ] Backend
+- [x] Página Novo Prato
+- [x] Página Editar Prato
+- [x] Backend
   - [ ] Banco de Dados
   - [ ] Autenticação
   - [ ] Requisitos do Backend

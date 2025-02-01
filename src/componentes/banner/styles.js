@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PontoDeQuebra } from "../../estilos/pontoDeQuebra";
 
 export const Container = styled.div`
 
@@ -15,6 +16,14 @@ export const Container = styled.div`
 
     img {
         z-index: 1;
+    }
+
+    @media (min-width: ${PontoDeQuebra}) {
+        max-width: 112rem;
+        margin: 2.6rem auto;
+        justify-content: space-evenly;
+
+
     }
 
 

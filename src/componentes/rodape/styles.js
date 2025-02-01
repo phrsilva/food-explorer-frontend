@@ -27,7 +27,6 @@ export const Container = styled.div`
         align-items: center;
         gap: 2rem;
         bottom: 0;
-        position:fixed ;
 
     }
 

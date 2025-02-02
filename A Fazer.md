@@ -5,10 +5,10 @@
 - [x] Página Novo Prato
 - [x] Página Editar Prato
 - [x] Backend
-  - [ ] Banco de Dados
+  - [x] Banco de Dados
   - [ ] Autenticação
+  - [ ] Autorização
   - [ ] Requisitos do Backend
-  - [ ] Testes de integração
   - [ ] Documentação do Backend
   - [ ] Documentação detalhada no README, incluindo instruções de execução do projeto e link de deploy
 - [ ] Navegação do Admin 

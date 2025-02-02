@@ -3,10 +3,13 @@ import { RotasDeAutenticacao } from './aut.routes'
 import { RotasDeAplicacao } from './app.routes'
 
 
+
 export function Rotas(){
+    const usuario = localStorage.getItem('@foodexplorer:usuario');
+
     return(
         <BrowserRouter>
-            <RotasDeAutenticacao/>
+            {usuario ? <RotasDeAplicacao /> : <RotasDeAutenticacao />}
         </BrowserRouter>
     )
 }

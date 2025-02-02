@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { api } from "../api";
+import { api } from "../services/api";
 
 const ContextoDeAutenticacao = createContext({});
 
@@ -8,10 +8,13 @@ export function ProvedorDeAutenticacao({ children }) {
 
     async function entrar({email, senha}) {
         try {
-            const response = await api.post("/", {email, senha});
-            const { user } = response.data;
-            localStorage.setItem("@foodexplorer:user", JSON.stringify(user));
-            setData(user);
+            const response = await api.post("/sessao", {email, senha});
+            const { usuario , token} = response.data;
+            localStorage.setItem("@foodexplorer:usuario", JSON.stringify(usuario));
+            localStorage.setItem("@foodexplorer:token", token);
+            api.defaults.headers.authorization = `Bearer ${token}`;
+
+            setData(usuario, token);
         } catch (error) {
             if (error.response) {
                 alert(error.response.data.message);
@@ -20,6 +23,13 @@ export function ProvedorDeAutenticacao({ children }) {
             }
         }
     }
+
+    return (
+        <ContextoDeAutenticacao.Provider value={{ entrar, usuario: data.usuario }}>
+            {children}
+        </ContextoDeAutenticacao.Provider>
+    );
+    
 
 }
 

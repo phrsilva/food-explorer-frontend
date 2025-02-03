@@ -12,8 +12,8 @@
 ## Página de prato
 
 - [x] Função de voltar
-- [] Carregar informações do prato pela Api 
-- [] Carregar ingredientes
+- [X] Carregar informações do prato pela Api 
+- [x] Carregar ingredientes
 
 ## Navegação de admin
 - [] Modificar barra de navegação

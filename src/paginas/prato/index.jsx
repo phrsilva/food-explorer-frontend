@@ -4,14 +4,32 @@ import { FiChevronLeft, FiPlus, FiMinus } from "react-icons/fi"
 import { BarraDeNavegacao } from "../../componentes/barraDeNavegacao"
 import {BotaoDeTexto} from "../../componentes/botaoDeTexto"
 import {PiReceipt} from "react-icons/pi"
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
+import {  useNavigate, useParams } from "react-router-dom"
+import { api } from "../../services/api"
 
 export function Prato() {
 
     const navigate = useNavigate()
 
+    const params = useParams()
 
+    const [prato, setPrato] = useState()
+
+    useEffect(() => {
+        async function buscarPrato() {
+            const response = await api.get(`/pratos/${params.id}`)
+            setPrato(response.data)
+           
+
+        }
+        buscarPrato()
+    }, [params.id])
+
+     // Enquanto os dados ainda estão carregando, exibe um indicador de carregamento
+     if (!prato) {
+        return <p>Carregando...</p>
+    }
 
     return (
 
@@ -20,24 +38,22 @@ export function Prato() {
 
             <Conteudo>
                 <BotaoDeTexto Icon={FiChevronLeft} title={"Voltar"} onClick={() => navigate(-1)}/>
-                <img src="" alt="Prato" />
-                <h2>Salada Ravanello</h2>
-                <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim</p>
+                <img src={prato.foto} alt="Prato" />
+                <h2>{prato.nome} </h2>
+                <p>{prato.descricao}</p>
 
                 <Tags>
-                    <span>alface</span>
-                    <span>cebola</span>
-                    <span>tomate</span>
-                    <span>pão naan</span>
-                    <span>pepino</span>
-                    <span>rabanete</span>
+                    {prato.ingredientes.map((ingrediente) => (
+                    <p key={ingrediente.id}>{ingrediente.nome}</p>
+                    ))}
                 </Tags>
+
 
                 <Pedido>
                     <FiPlus size={32}/>
                     <span>1</span>
                     <FiMinus size={32}/>
-                    <BotaoPedido Icon={PiReceipt} title={"pedir R$ 25,00"}/>
+                    <BotaoPedido Icon={PiReceipt} title={`pedir R$ ${prato.preco}`}/>
                 </Pedido>
 
 

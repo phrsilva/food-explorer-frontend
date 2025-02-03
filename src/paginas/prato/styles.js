@@ -3,7 +3,7 @@ import { Botao } from "../../componentes/botao";
 import { PontoDeQuebra } from "../../estilos/pontoDeQuebra";
 
 export const Container = styled.div`
-    
+
 
 `;
 
@@ -14,6 +14,7 @@ export const Conteudo = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 
     button {
         align-self: flex-start;
@@ -26,6 +27,7 @@ export const Conteudo = styled.div`
         margin-top: .6rem;
         max-width: 26.4rem;
         max-height: 26.4rem;
+        border-radius: 50%;
 
         /* animação para a imagem */
 
@@ -104,7 +106,9 @@ export const Conteudo = styled.div`
         }
 
         p {
+
             grid-area: descricao;
+            display: flex;
             font-family: 'Poppins', sans-serif;
             text-align: left;
         }

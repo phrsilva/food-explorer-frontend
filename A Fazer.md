@@ -1,20 +1,31 @@
 # A FAZER 
 
-- [x] Corrigir estilos da barra de navegação desktop 
-- [x] Página Home
-- [x] Página Novo Prato
-- [x] Página Editar Prato
-- [x] Backend
-  - [x] Banco de Dados
-  - [ ] Autenticação
-  - [ ] Autorização
-  - [ ] Requisitos do Backend
-  - [ ] Documentação do Backend
-  - [ ] Documentação detalhada no README, incluindo instruções de execução do projeto e link de deploy
-- [ ] Navegação do Admin 
-  - [ ] Barra de navegação
-  - [ ] Página Home
-  - [ ] Página Prato
-- [ ] Roteamento e navegação
-- [ ] Deploy do Frontend
-- [ ] Deploy do Backend
+## Página principal
+- [x] Adicionar pratos
+- [x] Acessar informações do prato ao clicar no card
+
+## Barra de navegação
+- [] Função de sair
+- [] Função de buscar pratos
+- [] Função de buscar pratos por ingrediente
+
+## Página de prato
+
+- [x] Função de voltar
+- [] Carregar informações do prato pela Api 
+- [] Carregar ingredientes
+
+## Navegação de admin
+- [] Modificar barra de navegação
+- [] Modificar o menu lateral
+- [] Modificar cards da página principal
+- [] Modificar página de prato
+- [] Adicionar prato na base de dados
+- [] Modificar prato na base de dados
+- [] Remover prato da base de dados
+
+## Deploy 
+
+- [] readme do backend 
+- [] deploy do backend no render
+- [] deploy do frontend no netlify

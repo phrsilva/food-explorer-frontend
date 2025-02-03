@@ -53,6 +53,7 @@ export function Principal() {
                                     nome={prato.nome} 
                                     foto={prato.foto} 
                                     preco={prato.preco} 
+                                    id={prato.id}
                                 />
                             </SwiperSlide>
                         ))}

@@ -11,7 +11,7 @@ export function RotasDeAplicacao() {
             <Route path="/editar/:id" element={<EditarPrato />} />
             <Route path="/novo" element={<NovoPrato />} />
 
-            <Route path="/:id" element={<Prato />} />
+            <Route path="prato/:id" element={<Prato />} />
 
         </Routes>
     );

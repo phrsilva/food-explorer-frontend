@@ -1,9 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react";
+const ContextoDeAutenticacao = createContext({});
 import { api } from "../services/api";
 
-const ContextoDeAutenticacao = createContext({});
 
-export function ProvedorDeAutenticacao({ children }) {
+function ProvedorDeAutenticacao({ children }) {
     const [data, setData] = useState({ usuario: null, token: null });
 
     useEffect(() => {
@@ -53,7 +53,9 @@ export function ProvedorDeAutenticacao({ children }) {
     );
 }
 
-export function usarAutenticacao() {
+function usarAutenticacao() {
     const contexto = useContext(ContextoDeAutenticacao);
     return contexto;
 }
+
+export { ProvedorDeAutenticacao, usarAutenticacao };

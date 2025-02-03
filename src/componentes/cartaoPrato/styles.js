@@ -19,7 +19,8 @@ export const Container = styled.div`
     max-width: 21rem;
 
     img {
-        max-width: 8.8rem;
+        width: 80%;
+        border-radius: .8rem;
     }
 
     svg:first-child {

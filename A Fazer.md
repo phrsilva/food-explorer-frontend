@@ -26,6 +26,6 @@
 
 ## Deploy 
 
-- [ ] readme do backend 
+- [x] ~~readme do backend~~
 - [ ] deploy do backend no render
 - [ ] deploy do frontend no netlify

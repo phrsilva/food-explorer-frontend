@@ -74,9 +74,10 @@ export const Conteudo = styled.div`
         "prato preco"
         "rodape rodape";
 
-        
-
+        max-width: 80vh;
+        height: 100vh;
         grid-template-columns: 90% 1fr;
+        margin-top: 2rem auto;
 
         gap: 2.4rem;
         align-items: center;
@@ -90,12 +91,9 @@ export const Conteudo = styled.div`
             max-height: 26.4rem;
         }
 
-        div:first-child {
-            grid-area: voltar;
-        }
+        
 
         button {
-            grid-area: voltar;
             align-self: flex-start;
         }
 
@@ -141,16 +139,19 @@ export const Tags = styled.div`
         transform: scale(1.1);
     }
 
-    span {
-        background-color: ${({theme}) => theme.ESCURO.ESCURO_1000};
-        padding: .6rem 1.2rem;
+    p {
+        background: ${({theme}) => theme.ESCURO.ESCURO_1000};
+        padding: .6rem ;
         border-radius: .6rem;
         font-size: 1.2rem;
     }
 
     @media (min-width: ${PontoDeQuebra}) {
-    display: flex;
-    justify-content: flex-start;
+        display: flex;
+        flex-direction: row;
+        gap: 1.2rem;
+        justify-content: flex-start;
+        margin: auto;
     }
 
 `;
@@ -180,5 +181,5 @@ export const Pedido = styled.div`
 export const BotaoPedido = styled(Botao)`
     margin: 1.2rem auto;
     font-family: 'Poppins', sans-serif;
-    font-size: .9rem;
+    font-size: 1.6rem;
 `;

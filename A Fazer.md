@@ -5,9 +5,9 @@
 - [x] ~~Acessar informações do prato ao clicar no card~~
 
 ## Barra de navegação
-- [ ] Função de sair
-- [ ] Função de buscar pratos
-- [ ] Função de buscar pratos por ingrediente
+- [x] ~~Função de sair~~
+- [x] ~~Função de buscar pratos~~
+- [x] ~~Função de buscar pratos por ingrediente~~
 
 ## ~~Página de prato~~
 

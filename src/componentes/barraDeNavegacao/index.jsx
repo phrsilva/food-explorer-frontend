@@ -5,10 +5,13 @@ import { PiReceipt } from "react-icons/pi";
 import { RxExit } from "react-icons/rx";
 import { PontoDeQuebra } from "../../estilos/pontoDeQuebra";
 import { MenuLateral } from "../menuLateral";
-import { Entrada } from "../entrada";
 import { Pesquisa } from "../pesquisa";
+import { useNavigate } from "react-router-dom";
+import { usarAutenticacao } from "../../hooks/aut";
 
 export function BarraDeNavegacao() {
+    const navigate = useNavigate();
+    const { sair } = usarAutenticacao();
     const [menuAberto, setMenuAberto] = useState(false);
     const [telaGrande, setTelaGrande] = useState(window.innerWidth >= Number(PontoDeQuebra.replace("px", "")));
 
@@ -31,6 +34,11 @@ export function BarraDeNavegacao() {
         return () => window.removeEventListener("resize", verificarTamanho);
     }, []);
 
+    function sairDaConta() {
+        sair()
+        navigate("/")
+    }
+
     return (
         <>
             {!menuAberto && (
@@ -39,7 +47,7 @@ export function BarraDeNavegacao() {
                     <LogoNavegacao />
                     {telaGrande && <Pesquisa icon={FiSearch} type="text" placeholder="Busque por pratos ou ingredientes" className="iconeDesktop" />}
                     {telaGrande && <BotaoPedidosDesktop title="Meus pedidos (0)" Icon={PiReceipt} className="iconeDesktop" />}
-                    {telaGrande && <RxExit className="iconeDesktop" />}
+                    {telaGrande && <RxExit className="iconeDesktop" onClick={sairDaConta} />}
                     {!telaGrande && <PiReceipt className="iconeMovel" />}
                     {!telaGrande && <BotaoPedidos title={"0"} />}
                 </Container>

@@ -19,6 +19,7 @@ function ProvedorDeAutenticacao({ children }) {
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
             // Atualizar o estado com o novo usuário e token
             setData({ usuario, token });
+            window.location.reload()
 
         } catch (error) {
             if (error.response) {
@@ -44,9 +45,20 @@ function ProvedorDeAutenticacao({ children }) {
             });
         }
     }, []); // Isso será executado uma vez após o componente ser montado
+
+    function sair() {
+        // Remover as informações do localStorage
+        localStorage.removeItem("@foodexplorer:usuario");
+        localStorage.removeItem("@foodexplorer:token");
+        // Remover o cabeçalho Authorization da requisição
+        delete api.defaults.headers.common['Authorization'];
+        // Definir os dados no estado
+        setData({});
+        window.location.reload()
+    }
     
     return (
-        <ContextoDeAutenticacao.Provider value={{ entrar, usuario: data.usuario }}>
+        <ContextoDeAutenticacao.Provider value={{ entrar, usuario: data.usuario, sair }}>
             {children}
         </ContextoDeAutenticacao.Provider>
     );

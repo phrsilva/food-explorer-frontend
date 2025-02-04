@@ -16,7 +16,6 @@ export function BarraDeNavegacao() {
     const { sair } = usarAutenticacao();
     const { usuario } = usarAutenticacao();
 
-    const [perfil, setPerfil] = useState("cliente");
     const [menuAberto, setMenuAberto] = useState(false);
     const [telaGrande, setTelaGrande] = useState(window.innerWidth >= Number(PontoDeQuebra.replace("px", "")));
 
@@ -46,6 +45,10 @@ export function BarraDeNavegacao() {
         navigate("/")
     }
 
+    function novoPrato() {
+        navigate("/novo")
+    }
+
     return (
         <>
             {!menuAberto && (
@@ -54,7 +57,7 @@ export function BarraDeNavegacao() {
                     <LogoNavegacao />
                     {telaGrande && <Pesquisa icon={FiSearch} type="text" placeholder="Busque por pratos ou ingredientes" className="iconeDesktop" />}
                     {(telaGrande && usuario.perfil === "cliente") && <BotaoPedidosDesktop title="Meus pedidos (0)" Icon={PiReceipt} className="iconeDesktop" />}
-                    {telaGrande && <BotaoPedidosDesktop title="novo prato" Icon={GiMeal} className="iconeDesktop" />}
+                    {telaGrande && <BotaoPedidosDesktop title="novo prato" Icon={GiMeal} className="iconeDesktop" onClick={novoPrato}/>}
                     {(telaGrande && usuario.perfil === "cliente") && <RxExit className="iconeDesktop" onClick={sairDaConta} />}
                     {!telaGrande && <PiReceipt className="iconeMovel" />}
                     {!telaGrande && <BotaoPedidos title={"0"} />}

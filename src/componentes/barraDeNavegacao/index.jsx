@@ -48,7 +48,6 @@ export function BarraDeNavegacao() {
         <>
             {!menuAberto && (
                 <Container>
-                    <p>{usuario.perfil}</p>
                     {!telaGrande && <FiMenu onClick={abrirMenu} className="iconeMovel" />}
                     <LogoNavegacao />
                     {telaGrande && <Pesquisa icon={FiSearch} type="text" placeholder="Busque por pratos ou ingredientes" className="iconeDesktop" />}

@@ -18,6 +18,8 @@ export const Container = styled.div`
         margin-bottom: 1.6rem;
     }
 
-    
+    p {
+        color: ${({theme}) => theme.COR.AZUL_200};
+    }
 
 `;

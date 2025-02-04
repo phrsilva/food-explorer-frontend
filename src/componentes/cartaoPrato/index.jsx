@@ -1,9 +1,13 @@
 import { Container, BotaoPrato, BotaoAdicionar } from "./styles";
 import { useState } from "react";
 import { FiMinus, FiPlus, FiHeart, FiChevronRight } from "react-icons/fi";
+import { GiMeal } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
+import { usarAutenticacao } from "../../hooks/aut";
 
 export function CartaoPrato({id, nome, foto, preco}) {
+
+    const { usuario } = usarAutenticacao();
 
     const navigate = useNavigate();
     let [quantidade, setQuantidade] = useState(1);
@@ -31,16 +35,20 @@ export function CartaoPrato({id, nome, foto, preco}) {
 
     return (
         <Container>
-            <FiHeart />
+            {usuario.perfil === "admin" ? <GiMeal /> : usuario.perfil === "cliente" && <FiHeart />}
             <img src={foto} alt="Prato" />
             <BotaoPrato title={nome} Icon={FiChevronRight} onClick={acessarPrato} />
             <span className="preco">R$ {preco}</span>
-            <div className="quantidadePedido">
+            { usuario.perfil === "cliente" &&
+                <div className="quantidadePedido">
                 <FiMinus onClick={diminuirQuantidade} />
                 <span>{quantidade}</span>
                 <FiPlus onClick={aumentarQuantidade}/>
-            </div>
-            <BotaoAdicionar title="incluir"/>
+                </div>
+            }
+            
+            {usuario.perfil === "cliente" && <BotaoAdicionar title="editar prato"/>}
+           
         </Container>
     );
 }

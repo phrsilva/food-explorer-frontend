@@ -58,7 +58,6 @@ export const Container = styled.div`
 export const LogoNavegacao = styled(Logo)`
     
     display: flex;
-    width: 25%;
 
     h1 {
         color: ${({theme}) => theme.CLARO.CLARO_100};

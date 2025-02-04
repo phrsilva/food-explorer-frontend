@@ -18,11 +18,11 @@
 ## Navegação de admin
 - [x] Modificar barra de navegação
 - [x] Modificar o menu lateral
-- [ ] Modificar cards da página principal
-- [ ] Modificar página de prato
+- [x] Modificar cards da página principal
+- [x] Modificar página de prato
 - [ ] Adicionar prato na base de dados
-- [ ] Modificar prato na base de dados
-- [ ] Remover prato da base de dados
+- [x] Modificar prato na base de dados
+- [x] Remover prato da base de dados
 
 ## Deploy 
 

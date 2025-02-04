@@ -16,7 +16,8 @@ export const Container = styled.div`
     border-radius: .8rem;
     padding: 1.2rem;
     margin: 1.6rem 0;
-    max-width: 21rem;
+    width: 21rem;
+    height: 29.2rem;
 
     img {
         width: 80%;
@@ -57,8 +58,8 @@ export const Container = styled.div`
     }
 
     @media (min-width: ${PontoDeQuebra}) {
-        max-width: 30.4rem;
-        max-height: 46.2rem;
+        width: 30.4rem;
+        height: 46.2rem;
     }
 `;
 

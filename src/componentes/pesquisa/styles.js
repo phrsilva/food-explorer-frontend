@@ -3,15 +3,18 @@ import styled from "styled-components";
 export const Container = styled.div`
     position: relative;
     width: 100%;
-    max-width: 400px;
-`;
+    max-width: 40rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    `;
 
 export const Input = styled.input`
+    color: ${({theme}) => theme.CLARO.CLARO_100};
     width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+    padding: 1rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.6rem;
 `;
 
 export const ListaSugestoes = styled.ul`
@@ -19,8 +22,7 @@ export const ListaSugestoes = styled.ul`
     top: 100%;
     left: 0;
     width: 100%;
-    background: #fff;
-    border: 1px solid #ddd;
+    background: ${({theme}) => theme.ESCURO.ESCURO_900};
     border-top: none;
     list-style: none;
     padding: 0;
@@ -32,10 +34,12 @@ export const ListaSugestoes = styled.ul`
 `;
 
 export const ItemSugestao = styled.li`
-    padding: 10px;
+    padding: 1rem;
+    border-bottom: 1px solid ${({theme}) => theme.CLARO.CLARO_900};
+
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.4rem;
     &:hover {
-        background: #f0f0f0;
+        background: ${({theme}) => theme.COR.AZUL_100};
     }
 `;

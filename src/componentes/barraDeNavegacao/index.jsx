@@ -57,10 +57,10 @@ export function BarraDeNavegacao() {
                     <LogoNavegacao />
                     {telaGrande && <Pesquisa icon={FiSearch} type="text" placeholder="Busque por pratos ou ingredientes" className="iconeDesktop" />}
                     {(telaGrande && usuario.perfil === "cliente") && <BotaoPedidosDesktop title="Meus pedidos (0)" Icon={PiReceipt} className="iconeDesktop" />}
-                    {telaGrande && <BotaoPedidosDesktop title="novo prato" Icon={GiMeal} className="iconeDesktop" onClick={novoPrato}/>}
-                    {(telaGrande && usuario.perfil === "cliente") && <RxExit className="iconeDesktop" onClick={sairDaConta} />}
-                    {(telaGrande && usuario.perfil === "cliente")  && <PiReceipt className="iconeMovel" />}
-                    {(telaGrande && usuario.perfil === "cliente") && <BotaoPedidos title={"0"} />}
+                    {(telaGrande && usuario.perfil === "admin") && <BotaoPedidosDesktop title="novo prato" Icon={GiMeal} className="iconeDesktop" onClick={novoPrato}/>}
+                    {telaGrande &&   <RxExit className="iconeDesktop" onClick={sairDaConta} />}
+                    {(!telaGrande && usuario.perfil === "cliente")  && <PiReceipt className="iconeMovel" />}
+                    {(!telaGrande && usuario.perfil === "cliente") && <BotaoPedidos title={"0"} />}
                 </Container>
             )}
 

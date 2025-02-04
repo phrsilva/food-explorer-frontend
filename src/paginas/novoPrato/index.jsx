@@ -51,7 +51,7 @@ export function NovoPrato() {
             }
 
             alert("Prato criado com sucesso!");
-            navegar("/pratos");
+            navegar("/");
         } catch (error) {
             alert("Erro ao criar prato.");
             console.error(error);

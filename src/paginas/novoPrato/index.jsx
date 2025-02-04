@@ -13,9 +13,11 @@ import { Selecao } from "../../componentes/selecao";
 import { Ingredientes } from "../../componentes/ingredientes";
 
 import { Container, Formulario } from "./styles";
+import { usarAutenticacao } from "../../hooks/aut";
 
 export function NovoPrato() {
     const navegar = useNavigate();
+    const { usuario } = usarAutenticacao();
 
     // ✅ Estados para armazenar os dados do prato
     const [nome, setNome] = useState("");
@@ -62,7 +64,7 @@ export function NovoPrato() {
         <Container>
             <BarraDeNavegacao />
             
-            <Formulario onSubmit={salvarPrato}>
+           { usuario.perfil === 'admin' && <Formulario onSubmit={salvarPrato}>
                 <BotaoDeTexto title="voltar" Icon={FiChevronLeft} className="voltar" onClick={() => navegar(-1)} />
                 <h2>Novo Prato</h2>
 
@@ -89,7 +91,7 @@ export function NovoPrato() {
                 <AreaDeTexto placeholder="Descrição do Prato" defaultValue={descricao} onChange={e => setDescricao(e.target.value)} />
 
                 <Botao title="Salvar Prato" type="submit" />
-            </Formulario>
+            </Formulario>}
             
             <Rodape />
         </Container>

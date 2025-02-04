@@ -17,7 +17,7 @@
 
 ## Navegação de admin
 - [x] Modificar barra de navegação
-- [ ] Modificar o menu lateral
+- [x] Modificar o menu lateral
 - [ ] Modificar cards da página principal
 - [ ] Modificar página de prato
 - [ ] Adicionar prato na base de dados

@@ -1,6 +1,5 @@
 import logoImg from '../../assets/polygon.svg'
 import {Container} from "./styles";
-import {useEffect, useState} from "react";
 import { usarAutenticacao } from "../../hooks/aut";
 
 export function Logo({className}) {

@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const Input = styled.input`
     color: ${({theme}) => theme.CLARO.CLARO_100};
+    background: ${({theme}) => theme.ESCURO.ESCURO_900};
     width: 100%;
     padding: 1rem;
     border: none;

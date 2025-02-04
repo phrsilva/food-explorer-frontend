@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Container, LogoNavegacao, BotaoPedidos, BotaoPedidosDesktop } from "./styles";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiSearch } from "react-icons/fi";
 import { PiReceipt } from "react-icons/pi";
 import { RxExit } from "react-icons/rx";
 import { PontoDeQuebra } from "../../estilos/pontoDeQuebra";
 import { MenuLateral } from "../menuLateral";
 import { Entrada } from "../entrada";
+import { Pesquisa } from "../pesquisa";
 
 export function BarraDeNavegacao() {
     const [menuAberto, setMenuAberto] = useState(false);
@@ -36,7 +37,7 @@ export function BarraDeNavegacao() {
                 <Container>
                     {!telaGrande && <FiMenu onClick={abrirMenu} className="iconeMovel" />}
                     <LogoNavegacao />
-                    {telaGrande && <Entrada type="text" placeholder="Busque por pratos ou ingredientes" className="iconeDesktop" />}
+                    {telaGrande && <Pesquisa icon={FiSearch} type="text" placeholder="Busque por pratos ou ingredientes" className="iconeDesktop" />}
                     {telaGrande && <BotaoPedidosDesktop title="Meus pedidos (0)" Icon={PiReceipt} className="iconeDesktop" />}
                     {telaGrande && <RxExit className="iconeDesktop" />}
                     {!telaGrande && <PiReceipt className="iconeMovel" />}

@@ -13,8 +13,8 @@ function ProvedorDeAutenticacao({ children }) {
             const { usuario, token } = response.data;
 
             // Armazenar as informações no localStorage
-            localStorage.setItem("@food-explorer:usuario", JSON.stringify(usuario));
-            localStorage.setItem("@food-explorer:token", token);
+            localStorage.setItem("@foodexplorer:usuario", JSON.stringify(usuario));
+            localStorage.setItem("@foodexplorer:token", token);
             // Configurar o cabeçalho Authorization para futuras requisições
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
             // Atualizar o estado com o novo usuário e token

@@ -29,21 +29,7 @@ export const Conteudo = styled.div`
         max-height: 26.4rem;
         border-radius: 50%;
 
-        /* animação para a imagem */
-
-        animation-name: spin;
-        animation-duration: 39000ms;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-
-        @keyframes spin {
-            from {
-                transform:rotate(0deg);
-            }
-            to {
-                transform:rotate(360deg);
-            }
-        }
+        
 
     }
 

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Container, LogoNavegacao, BotaoPedidos, BotaoPedidosDesktop } from "./styles";
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { PiReceipt } from "react-icons/pi";
+import { GiMeal } from "react-icons/gi";
+
 import { RxExit } from "react-icons/rx";
 import { PontoDeQuebra } from "../../estilos/pontoDeQuebra";
 import { MenuLateral } from "../menuLateral";
@@ -51,8 +53,9 @@ export function BarraDeNavegacao() {
                     {!telaGrande && <FiMenu onClick={abrirMenu} className="iconeMovel" />}
                     <LogoNavegacao />
                     {telaGrande && <Pesquisa icon={FiSearch} type="text" placeholder="Busque por pratos ou ingredientes" className="iconeDesktop" />}
-                    {telaGrande && <BotaoPedidosDesktop title="Meus pedidos (0)" Icon={PiReceipt} className="iconeDesktop" />}
-                    {telaGrande && <RxExit className="iconeDesktop" onClick={sairDaConta} />}
+                    {(telaGrande && usuario.perfil === "cliente") && <BotaoPedidosDesktop title="Meus pedidos (0)" Icon={PiReceipt} className="iconeDesktop" />}
+                    {telaGrande && <BotaoPedidosDesktop title="novo prato" Icon={GiMeal} className="iconeDesktop" />}
+                    {(telaGrande && usuario.perfil === "cliente") && <RxExit className="iconeDesktop" onClick={sairDaConta} />}
                     {!telaGrande && <PiReceipt className="iconeMovel" />}
                     {!telaGrande && <BotaoPedidos title={"0"} />}
                 </Container>

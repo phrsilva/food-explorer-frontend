@@ -12,9 +12,14 @@ import { usarAutenticacao } from "../../hooks/aut";
 export function BarraDeNavegacao() {
     const navigate = useNavigate();
     const { sair } = usarAutenticacao();
+    const { usuario } = usarAutenticacao();
+
+    const [perfil, setPerfil] = useState("cliente");
     const [menuAberto, setMenuAberto] = useState(false);
     const [telaGrande, setTelaGrande] = useState(window.innerWidth >= Number(PontoDeQuebra.replace("px", "")));
 
+
+    
     function abrirMenu() {
         setMenuAberto(true);
         document.body.style.overflow = "hidden";
@@ -43,6 +48,7 @@ export function BarraDeNavegacao() {
         <>
             {!menuAberto && (
                 <Container>
+                    <p>{usuario?.nome}</p>
                     {!telaGrande && <FiMenu onClick={abrirMenu} className="iconeMovel" />}
                     <LogoNavegacao />
                     {telaGrande && <Pesquisa icon={FiSearch} type="text" placeholder="Busque por pratos ou ingredientes" className="iconeDesktop" />}

@@ -5,30 +5,17 @@ export const ContextoDeAutenticacao = createContext({});
 
 
 function ProvedorDeAutenticacao({ children }) {
-    const [data, setData] = useState({});
-    async function entrar({ email, senha }) {
-        
-        try {
-            const response = await api.post("/sessao", { email, senha });
-            const { usuario, token } = response.data;
 
-            // Armazenar as informações no localStorage
-            localStorage.setItem("@foodexplorer:usuario", JSON.stringify(usuario));
-            localStorage.setItem("@foodexplorer:token", token);
-            // Configurar o cabeçalho Authorization para futuras requisições
+    // Definir os dados no estado
+    const [data, setData] = useState(() => {
+        const usuario = localStorage.getItem("@foodexplorer:usuario");
+        const token = localStorage.getItem("@foodexplorer:token");
+        if (usuario && token) {
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-            // Atualizar o estado com o novo usuário e token
-            setData({ usuario, token });
-            window.location.reload()
-
-        } catch (error) {
-            if (error.response) {
-                alert(error.response.data.message);
-            } else {
-                alert("Não foi possível entrar. Tente novamente");
-            }
+            return { usuario: JSON.parse(usuario), token };
         }
-    }
+        return {};
+    });
 
     useEffect(() => {
         // Verificar se existe um token e usuário no localStorage ao inicializar
@@ -45,7 +32,34 @@ function ProvedorDeAutenticacao({ children }) {
             });
         }
     }, []); // Isso será executado uma vez após o componente ser montado
+    async function entrar({ email, senha }) {
+        
+        try {
+            const response = await api.post("/sessao", { email, senha });
+            const { usuario, token } = response.data;
+            
+            // Armazenar as informações no localStorage
+            localStorage.setItem("@foodexplorer:usuario", JSON.stringify(usuario));
+            localStorage.setItem("@foodexplorer:token", token);
+            // Configurar o cabeçalho Authorization para futuras requisições
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            // Atualizar o estado com o novo usuário e token
+            setData({ usuario, token });
+            window.location.reload()
+            
+        } catch (error) {
+            if (error.response) {
+                alert(error.response.data.message);
+            } else {
+                alert("Não foi possível entrar. Tente novamente");
+            }
+        }
+        
+    } 
 
+   
+    
+    
     function sair() {
         // Remover as informações do localStorage
         localStorage.removeItem("@foodexplorer:usuario");

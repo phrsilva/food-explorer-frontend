@@ -57,7 +57,10 @@ export function Prato() {
                     <BotaoPedido Icon={PiReceipt} title={`pedir R$ ${prato.preco}`}/>
                 </Pedido>}
 
-                <BotaoPedido title={"Editar prato"} onClick={() => navigate(`/editar/${prato.id}`)}/>
+                <Pedido>
+                    <BotaoPedido title={"Editar prato"} onClick={() => navigate(`/editar/${prato.id}`)}/>
+                </Pedido>
+
 
 
             </Conteudo>

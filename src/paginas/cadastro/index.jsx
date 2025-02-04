@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router"
-import { Logo } from "../../componentes/logo"
+import { LogoDoLogin } from "../../componentes/logoLogin"
 import { Container, Formulario } from "./styles"
 import { Entrada } from "../../componentes/entrada"
 import { Botao } from "../../componentes/botao"
@@ -37,7 +37,7 @@ export function Cadastro() {
     return (
         <Container>
             <div className="logo">
-                <Logo />
+                <LogoDoLogin />
             </div>
             
             <div className="formulario">

@@ -7,7 +7,7 @@ import { usarAutenticacao } from "../../hooks/aut";
 
 export function MenuLateral({fecharMenu}) {
     const navigate = useNavigate();
-    const { sair } = usarAutenticacao();
+    const { usuario, sair } = usarAutenticacao();
 
     function sairDaConta() {
         sair()

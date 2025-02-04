@@ -16,7 +16,7 @@
 - [x] ~~Carregar ingredientes~~
 
 ## Navegação de admin
-- [ ] Modificar barra de navegação
+- [x] Modificar barra de navegação
 - [ ] Modificar o menu lateral
 - [ ] Modificar cards da página principal
 - [ ] Modificar página de prato

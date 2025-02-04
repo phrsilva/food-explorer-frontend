@@ -16,16 +16,16 @@
 - [x] ~~Carregar ingredientes~~
 
 ## Navegação de admin
-- [x] Modificar barra de navegação
-- [x] Modificar o menu lateral
-- [x] Modificar cards da página principal
-- [x] Modificar página de prato
-- [ ] Adicionar prato na base de dados
-- [x] Modificar prato na base de dados
-- [x] Remover prato da base de dados
+- [x] ~~Modificar barra de navegação~~
+- [x] ~~Modificar o menu lateral~~
+- [x] ~~Modificar cards da página principal~~
+- [x] ~~Modificar página de prato~~
+- [x] ~~Adicionar prato na base de dados~~
+- [x] ~~Modificar prato na base de dados~~
+- [x] ~~Remover prato da base de dados~~
 
 ## Deploy 
 
 - [x] ~~readme do backend~~
-- [ ] deploy do backend no render
-- [ ] deploy do frontend no netlify
+- [x] ~~deploy do backend no render~~
+- [x] ~~deploy do frontend no netlify~~

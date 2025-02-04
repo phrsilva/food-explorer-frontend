@@ -7,9 +7,10 @@ import {PiReceipt} from "react-icons/pi"
 import { useEffect, useState } from "react"
 import {  useNavigate, useParams } from "react-router-dom"
 import { api } from "../../services/api"
+import { usarAutenticacao } from "../../hooks/aut"
 
 export function Prato() {
-
+    const { usuario } = usarAutenticacao()
     const navigate = useNavigate()
 
     const params = useParams()
@@ -49,13 +50,14 @@ export function Prato() {
                 </Tags>
 
 
-                <Pedido>
+                { usuario.perfil === "cliente" && <Pedido>
                     <FiPlus size={32}/>
                     <span>1</span>
                     <FiMinus size={32}/>
                     <BotaoPedido Icon={PiReceipt} title={`pedir R$ ${prato.preco}`}/>
-                </Pedido>
+                </Pedido>}
 
+                <BotaoPedido title={"Editar prato"} onClick={() => navigate(`/editar/${prato.id}`)}/>
 
 
             </Conteudo>

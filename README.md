@@ -58,7 +58,7 @@ Ou, faça o download do arquivo zip através do Github
 O Deploy do frontend foi realizado através do Netlify.
 
 
-Link do Deploy: [food-explorer-](netlify.com)
+Link do Deploy: [food-explorer](https://food-explorer-phrsilva.netlify.app/)
 
 ## Licença
 

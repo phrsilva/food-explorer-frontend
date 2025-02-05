@@ -27,6 +27,18 @@ export function Prato() {
         buscarPrato()
     }, [params.id])
 
+    let [quantidade, setQuantidade] = useState(1);
+
+    function aumentarQuantidade() {
+        setQuantidade(quantidade + 1);
+    }
+
+    function diminuirQuantidade() {
+        if (quantidade > 1) {
+            setQuantidade(quantidade - 1);    
+        }
+    }
+
      // Enquanto os dados ainda estão carregando, exibe um indicador de carregamento
      if (!prato) {
         return <p>Carregando...</p>
@@ -51,9 +63,9 @@ export function Prato() {
 
 
                 { usuario.perfil === "cliente" && <Pedido>
-                    <FiPlus size={32}/>
-                    <span>1</span>
-                    <FiMinus size={32}/>
+                    <FiPlus size={32} onClick={aumentarQuantidade}/>
+                    <span>{quantidade}</span>
+                    <FiMinus size={32} onClick={diminuirQuantidade}/>
                     <BotaoPedido Icon={PiReceipt} title={`pedir R$ ${prato.preco}`}/>
                 </Pedido>}
 

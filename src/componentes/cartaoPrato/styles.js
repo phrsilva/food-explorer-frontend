@@ -22,6 +22,7 @@ export const Container = styled.div`
     img {
         width: 80%;
         border-radius: .8rem;
+        margin: 0 auto;
     }
 
     svg:first-child {

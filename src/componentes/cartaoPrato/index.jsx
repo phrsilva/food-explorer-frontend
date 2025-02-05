@@ -46,8 +46,8 @@ export function CartaoPrato({id, nome, foto, preco}) {
                 <FiPlus onClick={aumentarQuantidade}/>
                 </div>
             }
-            
-            {usuario.perfil === "cliente" && <BotaoAdicionar title="editar prato"/>}
+            <BotaoAdicionar  title="incluir"/>
+            {usuario.perfil === "admin" && <BotaoAdicionar title="editar prato"/>}
            
         </Container>
     );

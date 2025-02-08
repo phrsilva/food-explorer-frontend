@@ -30,7 +30,7 @@ export function Cadastro() {
             })
         } catch (error) {
             if (error.response) {
-                alert(error.response.data.message);
+                alert(error.response);
             } else {
                 alert("Erro ao criar conta. Tente novamente");
             }

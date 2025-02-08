@@ -23,17 +23,20 @@ export function Cadastro() {
             alert("Preencha todos os campos");
             return;
         }
-        api.post("/usuarios", {nome, email, senha}).then(() => {
-            alert("Conta criada com sucesso");
-            navegar(-1);
-        }).catch(error => {
+        try {
+            api.post("/usuarios", {nome, email, senha}).then(() => {
+                alert("Conta criada com sucesso");
+                navegar(-1);
+            })
+        } catch (error) {
             if (error.response) {
                 alert(error.response.data.message);
             } else {
                 alert("Erro ao criar conta. Tente novamente");
             }
-        });
-    }
+        }
+        }
+
     return (
         <Container>
             <div className="logo">

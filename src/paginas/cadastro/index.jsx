@@ -18,24 +18,24 @@ export function Cadastro() {
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
 
-    function criarConta() {
+    async function criarConta() {
         if (!nome || !email || !senha) {
             alert("Preencha todos os campos");
             return;
         }
         try {
-            api.post("/usuarios", {nome, email, senha}).then(() => {
+            awaitapi.post("/usuarios", {nome, email, senha}).then(() => {
                 alert("Conta criada com sucesso");
                 navegar(-1);
             })
         } catch (error) {
-            if (error.response) {
-                alert(error.response);
+            if (error.response && error.response.data) {
+                alert(error.response.data.message);
             } else {
                 alert("Erro ao criar conta. Tente novamente");
             }
         }
-        }
+    }
 
     return (
         <Container>

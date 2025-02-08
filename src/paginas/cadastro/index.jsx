@@ -24,7 +24,7 @@ export function Cadastro() {
             return;
         }
         try {
-            awaitapi.post("/usuarios", {nome, email, senha}).then(() => {
+            await api.post("/usuarios", {nome, email, senha}).then(() => {
                 alert("Conta criada com sucesso");
                 navegar(-1);
             })
